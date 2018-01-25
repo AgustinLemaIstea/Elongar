@@ -12,7 +12,7 @@ public class AlarmReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
 
 
-        context.startActivity(new Intent(context,AlarmActivity.class));
+        context.startActivity(new Intent(context,AlarmActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
 
 
         // For our recurring task, we'll just display a message
