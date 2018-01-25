@@ -1,14 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.istea.agustinlema.elongar.AlarmActivity">
+    tools:context="com.istea.agustinlema.elongar.AlarmActivity"
+    android:orientation="vertical">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="ALARM!!"/>
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A elongar!!" />
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/btnDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ya elongue"/>
+
+    <Button
+        android:id="@+id/btnSnooze2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recuerdame en 2 min"/>
+
+    <Button
+        android:id="@+id/btnSnooze5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recuerdame en 5 min"/>
+
+    <Button
+        android:id="@+id/btnSnooze15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recuerdame en 15 min"/>
+
+    <Button
+        android:id="@+id/btnSnooze30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recuerdame en 30 min"/>
+
+</LinearLayout>

@@ -67,7 +67,6 @@ public class MainActivity extends AppCompatActivity {
                         SystemClock.elapsedRealtime() +
                                 CADENCE * 1000, pendingIntent);
 
-                Toast.makeText(context, "alarm set", Toast.LENGTH_SHORT).show();
                 Log.d("Elongar", "setupDoneBtn: start with cadence "+CADENCE);
             }
         });
