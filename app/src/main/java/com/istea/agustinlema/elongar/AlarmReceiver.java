@@ -1,5 +1,6 @@
 package com.istea.agustinlema.elongar;
 
+import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -13,6 +14,11 @@ public class AlarmReceiver extends BroadcastReceiver {
 
 
         context.startActivity(new Intent(context,AlarmActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+        Log.d("Elongar", "onReceive: "+intent.getComponent().getClassName());
+        Log.d("Elongar", "onReceive: "+context.getClass().getName());
+        if (intent.getComponent().getClassName() == context.getClass().getName()){
+            ((Activity) context).finish();
+        }
 
 
         // For our recurring task, we'll just display a message

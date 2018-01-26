@@ -28,6 +28,7 @@ public class AlarmActivity extends AppCompatActivity {
         setupUI();
         setupButtons();
         vibrate();
+        setAlarm(5);
     }
 
     private void vibrate() {
@@ -49,20 +50,24 @@ public class AlarmActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Context context = AlarmActivity.this;
-                AlarmManager alarmMgr = (AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
-                Intent intent = new Intent(AlarmActivity.this, AlarmReceiver.class);
-                PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 0, intent, 0);
+                setAlarm(minutes);
 
-                alarmMgr.set(AlarmManager.ELAPSED_REALTIME_WAKEUP,
-                        SystemClock.elapsedRealtime() +
-                                minutes * 60 * 1000, pendingIntent);
-
-                Toast.makeText(context, "La alarma sonar{a en "+minutes+" minutos.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(AlarmActivity.this, "La alarma sonará en "+minutes+" minutos."
+                        , Toast.LENGTH_SHORT).show();
                 Log.d("Elongar", "setupDoneBtn: start with minutes "+minutes);
                 finish();
             }
         });
+    }
+
+    private void setAlarm(int minutes){
+        Context context = AlarmActivity.this;
+
+        Intent intent = new Intent(AlarmActivity.this, AlarmReceiver.class);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 0, intent, 0);
+
+        MyAlarmManager myAlarmMgr = MyAlarmManager.getInstance();
+        myAlarmMgr.SetNewAlarm(minutes, pendingIntent, context);
     }
 
     private void setupUI() {
