@@ -25,11 +25,11 @@ public class MyAlarmManager {
 
     }
 
-    public void SetNewAlarm(int minutes, PendingIntent pendingIntent, Context context){
+    public void SetNewAlarm(int seconds, PendingIntent pendingIntent, Context context){
         alarmMgr = (AlarmManager)context.getSystemService(Context.ALARM_SERVICE);
 
         nextAlarmTime=SystemClock.elapsedRealtime() +
-                minutes * 60 * 1000;
+                seconds * 1000;
 
         this.SaveNextTime(nextAlarmTime,context );
 

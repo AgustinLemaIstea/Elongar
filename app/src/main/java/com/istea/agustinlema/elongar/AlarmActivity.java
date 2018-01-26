@@ -67,7 +67,7 @@ public class AlarmActivity extends AppCompatActivity {
         PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 0, intent, 0);
 
         MyAlarmManager myAlarmMgr = MyAlarmManager.getInstance();
-        myAlarmMgr.SetNewAlarm(minutes, pendingIntent, context);
+        myAlarmMgr.SetNewAlarm(minutes*60, pendingIntent, context);
     }
 
     private void setupUI() {
