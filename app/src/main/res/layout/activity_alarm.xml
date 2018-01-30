@@ -19,28 +19,64 @@
         android:layout_height="wrap_content"
         android:text="Ya elongue"/>
 
-    <Button
-        android:id="@+id/btnSnooze2"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Recuerdame en 2 min"/>
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:text="Recuerdame en:"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/btnSnooze5"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="2"
+            android:text="5 min" />
+
+        <Button
+            android:id="@+id/btnSnooze15"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:text="15 min"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/btnSnooze30"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:text="30 min"/>
+
+        <Button
+            android:id="@+id/btnSnooze60"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:text="60 min"/>
+
+    </LinearLayout>
 
     <Button
-        android:id="@+id/btnSnooze5"
+        android:id="@+id/btnCancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Recuerdame en 5 min"/>
-
-    <Button
-        android:id="@+id/btnSnooze15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Recuerdame en 15 min"/>
-
-    <Button
-        android:id="@+id/btnSnooze30"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Recuerdame en 30 min"/>
+        android:text="Cancelar alarma"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"/>
 
 </LinearLayout>

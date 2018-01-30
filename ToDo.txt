@@ -1,0 +1,22 @@
+Quiero que durante el dia me recuerde una vez por hora
+Quiero poder cancelar la alarma si tengo algun evento o para dormir.
+Quiero poder posponer la alarma si estoy ocupado, tanto tiempo como haga falta.
+Quiero poder ver cuantas veces elongue por dia
+Quiero que si no vi la alarma me recuerde cada tanto
+Quiero que si no estuve viendo el telefono, me avise cuantas veces me recordo que ya era hora con notificacion
+Quiero un contador para proxima alarma
+Quiero poder especificar cuando ya elongue sin que haya saltado la alarma y que automaticamente espere 1 hora
+Quiero poder poner horas activas para que a la noche se cancele solo y a la mañana se active (o mejor yo inicio?)
+Quiero que los recordatorios automaticos no molesten si estoy ocupado y no puedo cancelar.
+
+--------------------------------------------
+Bugs:
++Multiples activities abiertas para alarma
++Activity de alarma vuelve a agregar recordatorio si se recarga.
+Contador se pisa con anterior.
+
+Features:
+Guardar veces elongadas
++Botón cancelar alarma
+Ver veces elongadas
++Botón posponer 1hs?

@@ -17,6 +17,11 @@
         android:id="@+id/doneBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ya elongué!"/>
+        android:text="cambiar alarmas"/>
+
+    <ListView
+        android:id="@+id/lvHistorico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></ListView>
 
 </LinearLayout>
